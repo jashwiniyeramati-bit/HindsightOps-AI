@@ -1,0 +1,639 @@
+/* =========================================================
+   HINDSIGHT - GLOBAL APP STYLES
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   MAIN APP LAYOUT
+   ========================================================= */
+
+.app {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 230px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 26px 16px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 8px 4px;
+
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.logo span {
+  font-size: 19px;
+  color: #a5b4fc;
+}
+
+.logo-subtitle {
+  margin: 0 8px 25px;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+
+/* SIDEBAR NAV */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar nav button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 11px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 550;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.sidebar nav button:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.sidebar nav button.active {
+  background: #273449;
+  color: #ffffff;
+}
+
+
+/* SIDEBAR FOOTER */
+
+.sidebar-footer {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 8px;
+
+  border-top: 1px solid #1e293b;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+  width: calc(100% - 230px);
+  min-height: 100vh;
+
+  margin-left: 230px;
+
+  background: #f5f7fb;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 36px 42px 60px;
+}
+
+
+/* TOP BAR */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+.topbar h1 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.topbar p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 14px;
+}
+
+
+/* AI ANALYSIS BUTTON */
+
+.new-incident {
+  border: none;
+  border-radius: 9px;
+
+  padding: 12px 18px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.new-incident:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 34px;
+}
+
+.stat-card {
+  min-height: 125px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7ef;
+  border-radius: 13px;
+
+  box-shadow:
+    0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.stat-card span {
+  margin-bottom: 10px;
+
+  color: #667085;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stat-card strong {
+  color: #101828;
+
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.stat-card.critical-stat strong {
+  color: #d92d20;
+}
+
+
+/* =========================================================
+   DASHBOARD SECTIONS
+   ========================================================= */
+
+.dashboard-section {
+  margin-bottom: 34px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.section-heading button {
+  border: none;
+  background: transparent;
+
+  color: #4f46e5;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+.section-heading button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   INCIDENT CARDS
+   ========================================================= */
+
+.incident-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.dashboard-incident {
+  min-height: 135px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7ef;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dashboard-incident:hover {
+  transform: translateY(-2px);
+
+  border-color: #c7d2fe;
+
+  box-shadow:
+    0 6px 18px rgba(16, 24, 40, 0.08);
+}
+
+.dashboard-incident > div {
+  min-width: 0;
+}
+
+.dashboard-incident strong {
+  display: block;
+
+  margin: 9px 0 5px;
+
+  color: #172033;
+
+  font-size: 15px;
+}
+
+.dashboard-incident p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+.dashboard-incident > span:last-child {
+  flex-shrink: 0;
+
+  color: #667085;
+
+  font-size: 11px;
+}
+
+
+/* SEVERITY */
+
+.severity {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+
+  padding: 4px 8px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.severity.critical {
+  background: #fee4e2;
+  color: #b42318;
+}
+
+.severity.warning {
+  background: #fff4cc;
+  color: #b54708;
+}
+
+
+/* =========================================================
+   HINDSIGHT IMPACT
+   ========================================================= */
+
+.impact-card {
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7ef;
+  border-radius: 13px;
+
+  box-shadow:
+    0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.impact-card > div:not(.impact-arrow) {
+  display: flex;
+  flex-direction: column;
+}
+
+.impact-card span {
+  margin-bottom: 8px;
+
+  color: #667085;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.impact-card strong {
+  margin-bottom: 5px;
+
+  color: #101828;
+
+  font-size: 28px;
+}
+
+.impact-card p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 12px;
+}
+
+.impact-arrow {
+  color: #98a2b3;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   GLOBAL BACK BUTTON
+   ========================================================= */
+
+.back-btn {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .sidebar {
+    width: 210px;
+  }
+
+  .main-content {
+    width: calc(100% - 210px);
+    margin-left: 210px;
+  }
+
+  .dashboard {
+    padding: 30px;
+  }
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .incident-cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+@media (max-width: 750px) {
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    padding: 18px;
+  }
+
+  .sidebar nav {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .sidebar-footer {
+    margin-top: 18px;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .app {
+    display: block;
+  }
+
+  .dashboard {
+    padding: 24px 18px 40px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topbar h1 {
+    font-size: 25px;
+  }
+
+  .new-incident {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .incident-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .impact-card > div:not(.impact-arrow) {
+    align-items: center;
+  }
+
+  .impact-arrow {
+    transform: rotate(90deg);
+  }
+}

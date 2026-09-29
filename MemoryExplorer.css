@@ -1,0 +1,1302 @@
+/* =========================================================
+   MEMORY EXPLORER
+========================================================= */
+
+.memory-page {
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 28px 42px 60px;
+
+  background: #f8fafc;
+
+  color: #111827;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.memory-back {
+  display: inline-flex;
+
+  align-items: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #4f46e5;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 4px 0;
+
+  margin-bottom: 18px;
+}
+
+.memory-back:hover {
+  color: #3730a3;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.memory-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 26px;
+}
+
+.memory-header h1 {
+  margin: 0 0 7px;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+.memory-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+.memory-count {
+  min-width: 96px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 11px 17px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.memory-count strong {
+  font-size: 21px;
+
+  line-height: 1.1;
+
+  color: #111827;
+}
+
+.memory-count span {
+  margin-top: 4px;
+
+  font-size: 10px;
+
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.memory-search {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  height: 48px;
+
+  box-sizing: border-box;
+
+  padding: 0 9px 0 15px;
+
+  margin-bottom: 24px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.search-icon {
+  flex-shrink: 0;
+
+  font-size: 16px;
+}
+
+.memory-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #111827;
+
+  font-size: 13px;
+}
+
+.memory-search input::placeholder {
+  color: #9ca3af;
+}
+
+.memory-search button {
+  height: 34px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #4f46e5;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.memory-search button:hover {
+  background: #4338ca;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.memory-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 30px;
+}
+
+.memory-stat-card {
+  min-height: 92px;
+
+  box-sizing: border-box;
+
+  padding: 17px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.03);
+}
+
+.memory-stat-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  font-weight: 500;
+}
+
+.memory-stat-card strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 23px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   HISTORICAL MEMORY HEADER
+========================================================= */
+
+.historical-section {
+  width: 100%;
+}
+
+.memory-list-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 16px;
+}
+
+.memory-list-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+
+  font-weight: 750;
+
+  color: #111827;
+}
+
+.memory-list-header p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.memory-list-header select {
+  min-width: 135px;
+
+  padding: 8px 11px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 11px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.memory-list-header select:focus {
+  border-color: #818cf8;
+}
+
+
+/* =========================================================
+   MEMORY CARD
+========================================================= */
+
+.explorer-card {
+  position: relative;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  margin-bottom: 14px;
+
+  padding: 19px 17px 15px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.explorer-card:hover {
+  border-color: #c7d2fe;
+
+  box-shadow:
+    0 5px 18px rgba(79, 70, 229, 0.08);
+
+  transform: translateY(-1px);
+}
+
+
+/* Newly learned card */
+
+.explorer-card.new-memory {
+  border-color: #a5b4fc;
+
+  box-shadow:
+    0 5px 20px rgba(79, 70, 229, 0.1);
+}
+
+.new-memory-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-bottom: 11px;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.03em;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.explorer-card-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.memory-id {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #6366f1;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.explorer-card h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   MATCH BADGE
+========================================================= */
+
+.match {
+  flex-shrink: 0;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.high-match {
+  background: #dcfce7;
+
+  color: #16a34a;
+}
+
+.medium-match {
+  background: #eef2ff;
+
+  color: #4f46e5;
+}
+
+.low-match {
+  background: #f1f5f9;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   MEMORY DETAILS
+========================================================= */
+
+.memory-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+
+  padding: 15px 0 12px;
+}
+
+.memory-details > div {
+  min-width: 0;
+}
+
+.memory-details span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+}
+
+.memory-details strong {
+  display: block;
+
+  color: #374151;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+.success-text {
+  color: #16a34a !important;
+}
+
+.partial-text {
+  color: #d97706 !important;
+}
+
+.failed-text {
+  color: #dc2626 !important;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.memory-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding-top: 11px;
+
+  border-top: 1px solid #f8fafc;
+}
+
+.memory-footer > span {
+  color: #9ca3af;
+
+  font-size: 9px;
+}
+
+.view-memory-button {
+  border: none;
+
+  background: transparent;
+
+  color: #4f46e5;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 4px 0;
+}
+
+.view-memory-button:hover {
+  color: #3730a3;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.memory-empty {
+  box-sizing: border-box;
+
+  padding: 50px 20px;
+
+  margin-bottom: 25px;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.empty-icon {
+  margin-bottom: 10px;
+
+  font-size: 25px;
+}
+
+.memory-empty h3 {
+  margin: 0 0 6px;
+
+  font-size: 15px;
+
+  color: #111827;
+}
+
+.memory-empty p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   MEMORY MODAL OVERLAY
+========================================================= */
+
+.memory-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 25px;
+
+  background: rgba(15, 23, 42, 0.62);
+
+  backdrop-filter: blur(4px);
+
+  animation: memoryOverlayIn 0.16s ease-out;
+}
+
+@keyframes memoryOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MEMORY DETAIL PANEL
+========================================================= */
+
+.memory-detail-panel {
+  width: min(790px, 100%);
+
+  max-height: 88vh;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  padding: 27px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.28);
+
+  animation: memoryPanelIn 0.18s ease-out;
+}
+
+@keyframes memoryPanelIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(12px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.detail-panel-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-panel-header > div:first-child {
+  min-width: 0;
+}
+
+.detail-panel-header span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #6366f1;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.detail-panel-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.modal-new-label {
+  display: inline-flex !important;
+
+  margin-top: 8px !important;
+
+  margin-bottom: 0 !important;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  background: #eef2ff;
+
+  color: #4f46e5 !important;
+
+  font-size: 9px !important;
+
+  letter-spacing: 0 !important;
+}
+
+
+/* Close */
+
+.detail-close-button {
+  flex-shrink: 0;
+
+  width: 35px;
+
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #f1f5f9;
+
+  color: #475569;
+
+  font-size: 23px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.detail-close-button:hover {
+  background: #e2e8f0;
+
+  color: #111827;
+}
+
+
+/* =========================================================
+   MODAL DETAIL GRID
+========================================================= */
+
+.detail-panel-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  padding: 20px 0;
+}
+
+.detail-panel-grid > div {
+  min-width: 0;
+
+  padding: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+}
+
+.detail-panel-grid span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+}
+
+.detail-panel-grid strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   MEMORY SECTIONS
+========================================================= */
+
+.memory-section {
+  margin-top: 12px;
+
+  padding: 15px 17px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.memory-section > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #6366f1;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.memory-section p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+
+/* What worked */
+
+.memory-section-success {
+  border-color: #bbf7d0;
+
+  background: #f0fdf4;
+}
+
+.memory-section-success > span {
+  color: #15803d;
+}
+
+
+/* What didn't work */
+
+.memory-section-warning {
+  border-color: #fed7aa;
+
+  background: #fff7ed;
+}
+
+.memory-section-warning > span {
+  color: #c2410c;
+}
+
+
+/* Lesson */
+
+.memory-section-lesson {
+  border-color: #c7d2fe;
+
+  background: #eef2ff;
+}
+
+.memory-section-lesson > span {
+  color: #4338ca;
+}
+
+.memory-section-lesson p {
+  color: #3730a3;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ENGINEER NOTE
+========================================================= */
+
+.memory-note {
+  margin-top: 12px;
+
+  padding: 15px 17px;
+
+  border: 1px solid #ddd6fe;
+
+  border-radius: 10px;
+
+  background: #f5f3ff;
+}
+
+.memory-note > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #6366f1;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.memory-note p {
+  margin: 0;
+
+  color: #4c1d95;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.memory-modal-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-top: 20px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.memory-modal-footer span {
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+.memory-modal-footer button {
+  flex-shrink: 0;
+
+  padding: 8px 17px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #4f46e5;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+.memory-modal-footer button:hover {
+  background: #4338ca;
+}
+
+
+/* =========================================================
+   LEARNING LOOP
+========================================================= */
+
+.learning-loop {
+  margin-top: 38px;
+
+  padding: 22px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.learning-loop-heading h2 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 16px;
+
+  font-weight: 750;
+}
+
+.learning-loop-heading p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.loop {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 23px;
+}
+
+.loop-step {
+  min-width: 130px;
+
+  padding: 14px 13px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  text-align: center;
+}
+
+.loop-step > span {
+  width: 25px;
+
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 8px;
+
+  border-radius: 50%;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.loop-step strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #111827;
+
+  font-size: 11px;
+}
+
+.loop-step small {
+  color: #94a3b8;
+
+  font-size: 9px;
+}
+
+.loop-arrow {
+  color: #a5b4fc;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.memory-detail-panel::-webkit-scrollbar {
+  width: 7px;
+}
+
+.memory-detail-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.memory-detail-panel::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #cbd5e1;
+}
+
+.memory-detail-panel::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .memory-page {
+    padding: 24px 25px 50px;
+  }
+
+  .memory-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .loop {
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .memory-page {
+    padding: 20px 16px 40px;
+  }
+
+  .memory-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .memory-count {
+    align-self: flex-start;
+  }
+
+  .memory-search {
+    height: auto;
+
+    min-height: 48px;
+
+    flex-wrap: wrap;
+
+    padding: 8px 9px;
+  }
+
+  .memory-search input {
+    min-width: 150px;
+
+    height: 32px;
+  }
+
+  .memory-search button {
+    height: 32px;
+  }
+
+  .memory-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-list-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .memory-details {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .explorer-card-top {
+    flex-direction: column;
+  }
+
+  .memory-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .detail-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-modal-overlay {
+    padding: 10px;
+  }
+
+  .memory-detail-panel {
+    max-height: 94vh;
+
+    padding: 20px;
+
+    border-radius: 14px;
+  }
+
+  .memory-modal-footer {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .memory-modal-footer button {
+    width: 100%;
+  }
+
+  .loop {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .loop-arrow {
+    transform: rotate(90deg);
+  }
+
+  .loop-step {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+}

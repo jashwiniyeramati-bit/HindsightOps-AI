@@ -1,0 +1,15 @@
+﻿node_modules/
+dist/
+__pycache__/
+*.pyc
+*.backup
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+*.db
+*.db-shm
+*.db-wal
+backend/hindsight-api.json
